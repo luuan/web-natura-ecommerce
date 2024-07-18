@@ -1,4 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+ function defineNextConfig(config) {
+    return config
+ }
 
-export default nextConfig;
+ export default defineNextConfig ({
+    reactStrictMode: true,
+    swcMinify: true,
+    webpack(config) {
+        config.module.rules.push({
+            test: /\.svg$/,
+            use: [{ loader: '@svgr/webpack', options: {icon:true}}]
+        })
+
+        return config
+    },
+    images: {
+        remotePatterns: [{ hostname: 'production.na01.natura.com' }, {hostname: 'picsum.photos'}]
+    },
+ })
