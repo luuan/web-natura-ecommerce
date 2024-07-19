@@ -15,6 +15,6 @@
         return config
     },
     images: {
-        remotePatterns: [{ hostname: 'production.na01.natura.com' }, {hostname: 'picsum.photos'}]
+        remotePatterns: [{ hostname: 'production.na01.natura.com' }, {hostname: 'api-teste-natura-v1.onrender.com'}]
     },
  })
