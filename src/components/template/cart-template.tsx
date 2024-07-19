@@ -11,7 +11,7 @@ export default function CartTemplate(props: CartTemplateProps) {
     return (
         <div className="w-full flex flex-col min-h-screen">
             <Header showCart={false}/>
-            <main className="w-[1200px] mx-auto flex-1">
+            <main>
                 {props.children}
             </main>
             <Footer />
